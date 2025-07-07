@@ -43,3 +43,5 @@ coverage/
 # Arquivos temporários
 *.swp
 *.swo
+
+/generated/prisma

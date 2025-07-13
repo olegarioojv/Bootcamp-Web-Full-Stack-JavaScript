@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect } from "react";
 import { useState } from "react";
 
@@ -22,6 +23,7 @@ export default function GaleriaProdutos() {
     fetch("/api")
       .then((response) => response.json())
       .then((data) => {
+
         setData(data);
       })
       .catch((error) => {
@@ -38,14 +40,18 @@ export default function GaleriaProdutos() {
               key={produto.id}
               className="bg-white rounded-lg shadow hover:shadow-md transition-shadow"
             >
-              <img
+              <Image
                 src={produto.image}
                 alt={produto.title}
+                width={1000}
+                height={1000}
                 className="w-full h-65 object-cover "
               />
               <div className="p-4">
                 <h2 className="text-sm font-medium text-gray-800 mb-1">{produto.title}</h2>
-                <p className="text-lg font-bold text-green-600">{produto.price}</p>
+                <p className="text-lg font-bold text-green-600">
+                    ${Number(produto.price).toFixed(2)}
+                </p>
                 <p className="text-xs text-gray-500 mt-1">{produto.location}</p>
               </div>
             </div>
@@ -55,5 +61,5 @@ export default function GaleriaProdutos() {
     </section>
   );
 }
-// Removed incorrect custom useState function
+
 

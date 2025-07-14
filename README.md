@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Mercado Livre Clone
 
-## Getting Started
+Projeto desenvolvido durante a **Semana Full Stack JavaScript 2025** na Codans, com orientação dos professores Jamilton Damasceno e Jorge Sant Ana.
 
-First, run the development server:
+## Descrição
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Este projeto é um clone simplificado da página inicial do Mercado Livre, com funcionalidades de exibição de produtos, integração com banco de dados e estilização moderna.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Tecnologias Utilizadas
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Next.js (React)** – Frontend moderno e performático
+- **TypeScript** – Tipagem estática para maior segurança
+- **Tailwind CSS** – Estilização rápida e responsiva
+- **Prisma ORM** – Manipulação eficiente do banco de dados
+- **PostgreSQL** – Banco de dados relacional
+- **API REST** – Comunicação entre frontend e backend
+- **Node.js** – Backend em JavaScript
+- **Docker** – (opcional) Ambiente de desenvolvimento
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Como rodar o projeto
 
-## Learn More
+1. **Clone o repositório:**
+   ```bash
+   git clone [https://github.com/seu-usuario/mercado-livre-clone.git](https://github.com/olegarioojv/Bootcamp-Web-Full-Stack-JavaScript.git)
+   cd mercado-livre
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+2. **Instale as dependências:**
+   ```bash
+   npm install
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. **Configure o banco de dados:**
+   - Crie um banco PostgreSQL e defina a variável `DATABASE_URL` no arquivo `.env`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+4. **Rode as migrations e o seed:**
+   ```bash
+   npx prisma migrate dev
+   npx prisma db seed
+   ```
 
-## Deploy on Vercel
+5. **Inicie o projeto:**
+   ```bash
+   npm run dev
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+6. **Acesse no navegador:**  
+   [http://localhost:3000](http://localhost:3000)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+   Desenvolvido com 💜 por João Victor
+   
